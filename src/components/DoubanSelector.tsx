@@ -75,24 +75,24 @@ const DoubanSelector: React.FC<DoubanSelectorProps> = ({
     { label: '日本', value: '日本' },
   ];
 
-  // 新增：电影的第三行类型选择器选项
+  // 新增：电影的第三行类型选择器选项 - 使用与筛选器相同的英文值
   const movieGenreOptions: SelectorOption[] = [
-    { label: '全部', value: '全部' },
-    { label: '动作', value: '动作' },
-    { label: '喜剧', value: '喜剧' },
-    { label: '爱情', value: '爱情' },
-    { label: '科幻', value: '科幻' },
-    { label: '恐怖', value: '恐怖' },
-    { label: '悬疑', value: '悬疑' },
-    { label: '惊悚', value: '惊悚' },
-    { label: '犯罪', value: '犯罪' },
-    { label: '战争', value: '战争' },
-    { label: '冒险', value: '冒险' },
-    { label: '奇幻', value: '奇幻' },
-    { label: '剧情', value: '剧情' },
-    { label: '历史', value: '历史' },
-    { label: '纪录片', value: '纪录片' },
-    { label: '动画', value: '动画' },
+    { label: '全部', value: 'all' },
+    { label: '动作', value: 'action' },
+    { label: '喜剧', value: 'comedy' },
+    { label: '爱情', value: 'romance' },
+    { label: '科幻', value: 'sci-fi' },
+    { label: '恐怖', value: 'horror' },
+    { label: '悬疑', value: 'suspense' },
+    { label: '惊悚', value: 'thriller' },
+    { label: '犯罪', value: 'crime' },
+    { label: '战争', value: 'war' },
+    { label: '冒险', value: 'adventure' },
+    { label: '奇幻', value: 'fantasy' },
+    { label: '剧情', value: 'drama' },
+    { label: '历史', value: 'history' },
+    { label: '纪录片', value: 'documentary' },
+    { label: '动画', value: 'animation' },
   ];
 
   // 电视剧一级选择器选项

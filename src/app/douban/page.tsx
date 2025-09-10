@@ -75,7 +75,7 @@ function DoubanPageClient() {
   });
 
   // 新增：电影类型选择器状态
-  const [genreSelection, setGenreSelection] = useState<string>('全部');
+  const [genreSelection, setGenreSelection] = useState<string>('all');
 
   // MultiLevelSelector 状态
   const [multiLevelValues, setMultiLevelValues] = useState<
@@ -375,7 +375,7 @@ function DoubanPageClient() {
           kind: type === 'show' ? 'tv' : (type as 'tv' | 'movie'),
           pageLimit: 25,
           pageStart: 0, // 初始数据加载始终从第一页开始
-          category: genreSelection !== '全部' ? genreSelection : (multiLevelValues.type
+          category: genreSelection !== 'all' ? genreSelection : (multiLevelValues.type
             ? (multiLevelValues.type as string)
             : ''),
           format: type === 'show' ? '综艺' : type === 'tv' ? '电视剧' : '',
@@ -391,7 +391,7 @@ function DoubanPageClient() {
             ? (multiLevelValues.label as string)
             : '',
         });
-      } else if (type === 'movie' && genreSelection !== '全部') {
+      } else if (type === 'movie' && genreSelection !== 'all') {
         // 新增：电影类型选择时使用recommends API
         data = await getDoubanRecommends({
           kind: 'movie',
@@ -556,7 +556,7 @@ function DoubanPageClient() {
               kind: type === 'show' ? 'tv' : (type as 'tv' | 'movie'),
               pageLimit: 25,
               pageStart: currentPage * 25,
-              category: genreSelection !== '全部' ? genreSelection : (multiLevelValues.type
+              category: genreSelection !== 'all' ? genreSelection : (multiLevelValues.type
                 ? (multiLevelValues.type as string)
                 : ''),
               format: type === 'show' ? '综艺' : type === 'tv' ? '电视剧' : '',
@@ -576,7 +576,7 @@ function DoubanPageClient() {
                 ? (multiLevelValues.label as string)
                 : '',
             });
-          } else if (type === 'movie' && genreSelection !== '全部') {
+          } else if (type === 'movie' && genreSelection !== 'all') {
             // 新增：电影类型选择时使用recommends API
             data = await getDoubanRecommends({
               kind: 'movie',
